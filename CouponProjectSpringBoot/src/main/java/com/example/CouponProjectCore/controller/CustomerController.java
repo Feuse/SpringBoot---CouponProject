@@ -1,4 +1,4 @@
-package com.example.CouponProjectCore.rest;
+package com.example.CouponProjectCore.controller;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,11 +13,11 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import com.example.CouponProjectCore.customerService.CouponService;
 
-import com.example.CouponProjectCore.customerService.CustomerCouponDAOSecond;
-import com.example.CouponProjectCore.customerService.CustomerCouponService;
-import com.example.CouponProjectCore.customerService.CustomerService;
+import com.example.CouponProjectCore.Services.CouponService;
+import com.example.CouponProjectCore.Services.CustomerCouponDAOSecond;
+import com.example.CouponProjectCore.Services.CustomerCouponService;
+import com.example.CouponProjectCore.Services.CustomerService;
 import com.example.CouponProjectCore.entity.Coupon;
 import com.example.CouponProjectCore.entity.Customer;
 import com.example.CouponProjectCore.entity.CustomerCoupons;
@@ -66,33 +66,6 @@ public class CustomerController {
 
 	@GetMapping("purchase/{coupid}")
 	public String purchaseCoupon(@PathVariable int coupid, Model model) {
-
-//		List<CustomerCoupons> theCoupons = customerCouponDAOImpl.findAll();
-//		List<Coupon> allCoupons = new ArrayList<Coupon>();
-//		for (CustomerCoupons customerCoupons : theCoupons) {
-//
-//			Optional<Coupon> opt1 = couponService.findById(customerCoupons.getCouponId());
-//			if (!allCoupons.contains(opt1.get())) {
-//
-//				if (opt1.isPresent()) {
-//
-//					allCoupons.add(opt1.get());
-//				}
-//			}
-//		}
-//		if (allCoupons.isEmpty()) {
-//			model.addAttribute("error", null);
-//
-//			Coupon coupon = couponService.getOne(coupid);
-//			coupon.setAmount(coupon.getAmount() - 1);
-//			couponService.save(coupon);
-//			int id = customerService.getCurrentCustomer().getCust_id();
-//			customerCouponService.save(id, coupid);
-//			model.addAttribute("coupon", coupon);
-//			return "PurchaseVerification";
-//		}
-
-	
 
 			try {
 
