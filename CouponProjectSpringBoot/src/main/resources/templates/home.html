@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>  
+<title>
+HELLO THYMELEAF PAGE 
+</title>
+ </head>
+
+<body>
+
+<table border="1">
+<thead>
+<tr>
+<th>first name</th>
+<th>password</th>
+</tr>
+</thead>
+
+<tbody>
+<tr th:each="theCustomers : ${customers}">
+
+<td th:text="${theCustomers.name}"/>
+<td th:text="${theCustomers.password}"/>
+
+</tr>
+</tbody>
+
+<thead>
+<tr>
+<th>first name</th>
+<th>password</th>
+</tr>
+</thead>
+
+
+
+
+</table>
+
+</body>
+
+
+</html>
