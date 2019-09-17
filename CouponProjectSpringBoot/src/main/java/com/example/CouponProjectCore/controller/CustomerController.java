@@ -107,23 +107,9 @@ public class CustomerController {
 	@GetMapping("/getAllPurchasedCoupons")
 	public String getAllPurchasedCoupons(Model theModel) {
 
-//		List<Coupon> coupon = new ArrayList<Coupon>();
-//		List<Coupon> theCoupons = couponService.findAll();
 		if (!getAllCustomerCoupons().isEmpty()) {
 			theModel.addAttribute("theCoupon", getAllCustomerCoupons());
 		}
-
-//		if (!theCoupons.isEmpty()) {
-//			for (Coupon theCoupon : theCoupons) {
-//				
-//				if (customerService.getCurrentCustomer().getCust_id() == theCoupon.getCompany().getId()) {
-//					System.out.println("adding");
-//					coupon.add(theCoupon);
-//					theModel.addAttribute("theCoupon", coupon);		
-//				}
-//			}
-//		}
-
 		return "getAllPurchasedCoupons";
 	}
 }
